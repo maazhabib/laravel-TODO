@@ -7,6 +7,8 @@
     <title>TODOS</title>
 </head>
 <body>
-    <h1>Todo Page</h1>
+
+    <h1>TODO APP</h1>
+
 </body>
 </html>
