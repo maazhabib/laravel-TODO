@@ -19,7 +19,7 @@ class CreteTodoTable extends Migration
             $table->text('description');
             $table->boolean('completed');
             $table->timestamps();
-        });
+        }); 
     }
 
     /**

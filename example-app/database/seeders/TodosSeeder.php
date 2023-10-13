@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Carbon\Factory;
 use Illuminate\Database\Seeder;
 
 class TodosSeeder extends Seeder
@@ -14,6 +13,8 @@ class TodosSeeder extends Seeder
      */
     public function run()
     {
-        // Factory(App\todos::class)->create();
+        \App\Models\Todo::factory()->count(20)->create();
+        // we can also can do in this 
+        \App\Models\Todo::factory(20)->create();
     }
 }

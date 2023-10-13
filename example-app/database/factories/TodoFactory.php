@@ -4,8 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-
-class TodofactoryFactory extends Factory
+class TodoFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -15,10 +14,9 @@ class TodofactoryFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->sentence(3),
-            'email' => $this->faker->paragraph(4),
-            'completed' => false
-
+            'name' => $this->faker->name,
+            'description' => $this->faker->paragraph(4),
+            'completed' => false,
         ];
     }
 }
