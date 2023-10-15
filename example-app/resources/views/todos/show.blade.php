@@ -47,15 +47,15 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ $data->id }}</td>
-                    <td>{{ $data->name }}</td>
-                    <td>{{ $data->description }}</td>
+                    <td>{{ $todo->id }}</td>
+                    <td>{{ $todo->name }}</td>
+                    <td>{{ $todo->description }}</td>
                 </tr>
-
+                
             </tbody>
         </table>  <br>
-        <a  class="btn btn-warning" href="/todos/{{$data->id}}/edit">EDIT</a>
-        <a  class="btn btn-danger" href="">DELETE</a>
+        <a  class="btn btn-warning" href="{{ route('todo.edit' , $todo->id) }}">EDIT</a>
+        <a  class="btn btn-danger" href="{{ route('todo.delete' , $todo->id) }}">DELETE</a>
 
     </div>
 

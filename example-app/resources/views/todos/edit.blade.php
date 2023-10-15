@@ -12,7 +12,7 @@
 
     <div class="container my-5">
         <h1>EDIT DATA</h1>
-        {{-- @if($errors->any())
+        @if($errors->any())
         <div class="alert alert-danger">
 
             <ul class="list-group">
@@ -26,7 +26,7 @@
 
         </div>
 
-        @endif --}}
+        @endif
         <form action="/todos/{{ $todo->id }}/update-todos" method="POST">
             @csrf
             <div><input type="hidden" name="todo_id" value="{{ $todo->id }}"></div>
@@ -35,8 +35,8 @@
               <input name="name" type="text" class="form-control" placeholder="Enter Your Name" value="{{ $todo->name }}" id="name" >
             </div>
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">DESCRIPTION</label>
-              <input name="desc" type="text" class="form-control" placeholder="Enter Your Name" value="{{ $todo->description }}" id="name">
+                <label for="description">DESCRIPTION</label>
+              <input name="description" type="text" class="form-control" placeholder="Enter Your Name" value="{{ $todo->description }}" id="description">
               </div>
               <br>
             <button type="submit" class="btn btn-success">UPDATE</button>

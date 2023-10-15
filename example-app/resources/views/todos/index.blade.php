@@ -47,6 +47,8 @@
                 <th scope="col">Name</th>
                 <th scope="col">DESCRIPTION</th>
                 <th scope="col">BUTTON</th>
+                <th scope="col">EDIT</th>
+                <th scope="col">DELETE</th>
             </tr>
             </thead>
             <tbody>
@@ -58,6 +60,8 @@
                     <td>{{ $todo->name }}</td>
                     <td>{{ $todo->description }}</td>
                     <td><a href="{{ route('todo.show', $todo->id) }}" class="btn btn-info btn-sm">VIEW</a></td>
+                    <td><a href="{{ route('todo.edit' , $todo->id) }}"  class="btn btn-warning btn-sm">EDIT</a></td>
+                    <td><a href="{{ route('todo.delete' , $todo->id) }}" class="btn btn-danger btn-sm">DELETE</a></td>
                 </tr>
                 @endforeach
 

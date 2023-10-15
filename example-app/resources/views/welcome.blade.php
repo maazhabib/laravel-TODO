@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <a href="{{ route('todo.index') }}"><h1>TODO PAGE</h1></a>
+    <a href="{{ route('todos.index') }}"><h1>TODO PAGE</h1></a>
 
 </body>
 </html>

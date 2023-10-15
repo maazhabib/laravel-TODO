@@ -10,7 +10,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/todos' , [TodoController::class , 'index'])->name('todo.index');
+Route::get('/todos' , [TodoController::class , 'index'])->name('todos.index');
 
 Route::get('/todo/{todo}' , [TodoController::class , 'show'])->name('todo.show');
 
@@ -20,5 +20,6 @@ Route::post('/store_todos' , [TodoController::class , 'store'])->name('add.todo.
 
 Route::get('/todos/{todo}/edit' , [TodoController::class , 'edit'])->name('todo.edit');
 
-Route::post('todos/{todo}/update-todos' , [TodoController::class , 'update'])->name('update.edit');
+Route::post('todos/{todo}/update-todos' , [TodoController::class , 'update'])->name('todo.update');
 
+Route::get('todos/{todo}/delete' , [TodoController::class , 'delete'])->name('todo.delete');
